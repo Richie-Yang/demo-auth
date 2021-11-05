@@ -1,14 +1,8 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-const mongoose = require('mongoose')
 const routes = require('./routes')
-
-mongoose.connect('mongodb://localhost/demo-auth')
-const db = mongoose.connection
-
-db.on('error', () => console.error('mongodb error!'))
-db.once('open', () => console.log('mongodb connected!'))
+require('./config/mongoose')
 
 const app = express()
 const PORT = 3000

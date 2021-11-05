@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a.navbar-brand i.fa-user-secret {
+  margin-right: .25rem;
+}
+
+main.container {
+  /* outline: 1px solid tomato; */
+  margin-top: 150px;
+  padding: 25px;
+  width: 90vw;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 5px #3498db;
+  transition: box-shadow .5s
+}
+
+main.container:hover {
+  box-shadow: 0 0 30px 5px #3498db;
+}
+
+#login-form label.form-check-label {
+  margin-left: 10px;
+}

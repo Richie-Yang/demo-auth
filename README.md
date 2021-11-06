@@ -20,7 +20,7 @@ git clone https://github.com/Richie-Yang/demo-auth.git
 ```
 2. Move to repo directory.
 ```
-cd url-shortener
+cd demo-auth
 ```
 3. Run the command below to start installing dependencies.
 ```

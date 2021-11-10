@@ -11,7 +11,7 @@ router.get('/', sessionCheck, (req, res) => {
 })
 
 // POST to login (Read in CRUD operation)
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   const { email, password, rememberEmail } = req.body
 
   return User.findOne({ email, password }, 'first_name')
@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
         })
       }
     })
-    .catch(error => console.log(error))
+    .catch(next)
 })
 ////// Routing Section Ends Here //////
 

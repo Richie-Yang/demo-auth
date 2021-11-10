@@ -44,11 +44,12 @@ app.use(routes)
 
 // Handling all 500 errors scenario
 app.use((err, req, res, next) => {
-  res.status(500).render('error', {
-    title: '500',
-    description: 'Something went wrong, please try again later, or click Back button below.'
+  console.log(err.stack)
+  const { statusCode = 500 } = err
+  res.status(statusCode).render('error', {
+    statusCode, 
+    message: `Something went wrong, please try again later, or click Back button below.`
   })
-  next(err)
 })
 
 

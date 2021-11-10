@@ -6,7 +6,7 @@ const sessionCheck = require('../../sessionCheck')
 ////// Routing Section Starts Here //////
 // GET index page (Read in CRUD operation)
 router.get('/', sessionCheck, (req, res) => {
-  res.redirect('/login')
+  return res.redirect('/login')
 })
 ////// Routing Section Ends Here //////
 

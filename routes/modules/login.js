@@ -7,7 +7,7 @@ const sessionCheck = require('../../sessionCheck')
 ////// Routing Section Starts Here //////
 // GET login page (Read in CRUD operation)
 router.get('/', sessionCheck, (req, res) => {
-  res.render('login')
+  return res.render('login')
 })
 
 // POST to login (Read in CRUD operation)
@@ -21,7 +21,7 @@ router.post('/', (req, res, next) => {
         const { first_name } = user
         req.body['firstName'] = first_name
         req.session.user = req.body
-        res.redirect(`/dashboard?user=${first_name}`)
+        return res.redirect(`/dashboard?user=${first_name}`)
 
       } else {
         // using comparing operator to save the result to emailCheck
